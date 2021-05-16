@@ -21,14 +21,19 @@ function addEmployee() {
     
     //take in values from inputs
     //create objects with the values
-    let employeeObject = {
-        firstName : $('fname').val(),
-        //lastName : 
+    //getter
+    const employee = {
+        firstName : $('.fnameIn').val(),
+        lastName : $('.lnameIn').val(),
+        idNum : $('.idNumIn').val(),
+        title : $('.titleIn').val(),
+        salary : $('.salaryIn').val()
     }
-    console.log(employeeObject);
+    
+    console.log(employee);
     
     //push objects into employee array
-    employees.push(employeeObject);
+    employees.push(employee);
 }
 
 console.log(employees);
