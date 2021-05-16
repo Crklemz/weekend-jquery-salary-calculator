@@ -1,9 +1,10 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+jquery salary calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This calculator takes in 5 inputs (First name, Last name, ID, Title, Annual Salary), creates objects (employees) and stores them employee array.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+The main function is to calculate the total monthly cost of employing the added amployees, which I did by adding up the annual salaries and dividing the total by 12 months.
+
