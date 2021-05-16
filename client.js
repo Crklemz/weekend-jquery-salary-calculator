@@ -1,9 +1,9 @@
 console.log('js');
 
+const employees = [];
+
+
 $(document).ready(readyNow);
-
-let employees = [];
-
 
 function readyNow(){
     console.log('JQ');
@@ -18,6 +18,7 @@ function readyNow(){
 
 function addEmployee() {
     console.log('submit button clicked');
+
     
     //take in values from inputs
     //create objects with the values
@@ -30,13 +31,15 @@ function addEmployee() {
         salary : $('.salaryIn').val()
     }
     
-    console.log(employee);
-    
+    console.log('in addEmployee, printing employee', employee);
+
     //push objects into employee array
     employees.push(employee);
+    console.log('in addEmployee, printing employees array after employee push', employees);
+    
 }
 
-console.log(employees);
+
 
 //The application should have an input form that collects
 //employee first name, last name, ID number, job title, annual salary
