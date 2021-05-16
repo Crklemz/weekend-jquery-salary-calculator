@@ -84,9 +84,13 @@ function getMonthlyTotal() {
 
     console.log('monthlyCost', monthlyCost);
     
-    //print to DOM
+    //print to DOM and if over 20,000 - highlight
+
     $('#totalMonthly').text(`Total Monthly: $${formatNumber(monthlyCost.toFixed(2))}`)
 
+    if(monthlyCost > 20000) {
+        $('#totalMonthly').addClass('warning');
+    }
 }
 
 function formatNumber (num) {
