@@ -2,6 +2,7 @@ console.log('js');
 
 const employees = [];
 
+let totalAnnual = 0;
 
 $(document).ready(readyNow);
 
@@ -11,6 +12,8 @@ function readyNow(){
 
     //click listeners
     $('#submit').on('click', addEmployee);
+
+    $('#submit').on('click', getMonthlyTotal);
 
     $('.employeeTable').on('click', '.deleteBtn', handleDelete);
 
@@ -60,23 +63,32 @@ function addEmployee() {
         <td>${employee.lastName}</td>
         <td>${employee.idNum}</td>
         <td>${employee.title}</td>
-        <td>${employee.salary}</td>
+        <td>$${employee.salary}</td>
         <td><button class="deleteBtn">DELETE</button></td>        
     </tr>
     `)
 
-    //connect employee properties to table with matching class
-
-    // $('.firstT').text(`${employee.firstName}`);
-    // $('.lastT').text(`${employee.lastName}`);
-    // $('.idT').text(`${employee.idNum}`);
-    // $('.titleT').text(`${employee.title}`);
-    // $('.salaryT').text(`${employee.salary}`);
-
-    //
-
 }
 
+function getMonthlyTotal() {
+    console.log('in getMonthlyTotal');
+    //gather all salaries in employees array and add them together
+    // let salaries = 0;
+    // for (let i=0; i < employees.length; i++) {
+    //     salaries = employees.salary[i] + salaries;
+    // }//end for
+    // console.log('salaries variable', salaries);
+    
+    // // divide annual amount by 12 to get monthly
+    // let monthlyCost = salaries / 12;
+
+    // console.log('monthlyCost', monthlyCost);
+    
+    
+    // //print to DOM
+    // $('#totalMonthly').text(`Total Monthly: $${monthlyCost}`)
+
+}
 
 
 
