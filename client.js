@@ -37,7 +37,23 @@ function addEmployee() {
     employees.push(employee);
     console.log('in addEmployee, printing employees array after employee push', employees);
     
+    //print employees array onto DOM***
+    //connect employee properties to table with matching class
+
+    $('.firstT').text(`${employee.firstName}`);
+    $('.lastT').text(`${employee.lastName}`);
+    $('.idT').text(`${employee.idNum}`);
+    $('.titleT').text(`${employee.title}`);
+    $('.salaryT').text(`${employee.salary}`);
+
+
+    //loop through array and print on DOM in table
+
+
+
 }
+
+
 
 
 
