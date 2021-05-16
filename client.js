@@ -63,7 +63,7 @@ function addEmployee() {
         <td>${employee.lastName}</td>
         <td>${employee.idNum}</td>
         <td>${employee.title}</td>
-        <td>$${employee.salary}</td>
+        <td>$${formatNumber(employee.salary)}</td>
         <td><button class="deleteBtn">DELETE</button></td>        
     </tr>
     `)
@@ -84,13 +84,14 @@ function getMonthlyTotal() {
 
     console.log('monthlyCost', monthlyCost);
     
-    
     //print to DOM
-    $('#totalMonthly').text(`Total Monthly: $${monthlyCost.toFixed(2)}`)
+    $('#totalMonthly').text(`Total Monthly: $${formatNumber(monthlyCost.toFixed(2))}`)
 
 }
 
-
+function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+}
 
 //The application should have an input form that collects
 //employee first name, last name, ID number, job title, annual salary
