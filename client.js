@@ -12,9 +12,15 @@ function readyNow(){
     //click listeners
     $('#submit').on('click', addEmployee);
 
+    $('.employeeTable').on('click', '.deleteBtn', handleDelete);
 
 }
 
+function handleDelete() {
+    console.log('clicked delete');
+    $(this).closest('.employeeRow').remove();
+    
+}
 
 function addEmployee() {
     console.log('submit button clicked');
@@ -55,7 +61,7 @@ function addEmployee() {
         <td>${employee.idNum}</td>
         <td>${employee.title}</td>
         <td>${employee.salary}</td>
-        <td></td>        
+        <td><button class="deleteBtn">DELETE</button></td>        
     </tr>
     `)
 
@@ -67,12 +73,9 @@ function addEmployee() {
     // $('.titleT').text(`${employee.title}`);
     // $('.salaryT').text(`${employee.salary}`);
 
-    //loop through array and print on DOM in table
-
-
+    //
 
 }
-
 
 
 
