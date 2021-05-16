@@ -64,7 +64,7 @@ function addEmployee() {
         <td>${employee.idNum}</td>
         <td>${employee.title}</td>
         <td>$${formatNumber(employee.salary)}</td>
-        <td><button class="deleteBtn">DELETE</button></td>        
+        <td><button class="deleteBtn btn btn-danger">DELETE</button></td>        
     </tr>
     `)
 
