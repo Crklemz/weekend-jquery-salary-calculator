@@ -73,20 +73,20 @@ function addEmployee() {
 function getMonthlyTotal() {
     console.log('in getMonthlyTotal');
     //gather all salaries in employees array and add them together
-    // let salaries = 0;
-    // for (let i=0; i < employees.length; i++) {
-    //     salaries = employees.salary[i] + salaries;
-    // }//end for
-    // console.log('salaries variable', salaries);
+    let salaries = 0;
+    for (let i=0; i < employees.length; i++) {
+        salaries += Number(employees[i].salary);
+    }//end for
+    console.log('salaries variable', salaries);
     
-    // // divide annual amount by 12 to get monthly
-    // let monthlyCost = salaries / 12;
+    // divide annual amount by 12 to get monthly
+    let monthlyCost = salaries / 12;
 
-    // console.log('monthlyCost', monthlyCost);
+    console.log('monthlyCost', monthlyCost);
     
     
-    // //print to DOM
-    // $('#totalMonthly').text(`Total Monthly: $${monthlyCost}`)
+    //print to DOM
+    $('#totalMonthly').text(`Total Monthly: $${monthlyCost.toFixed(2)}`)
 
 }
 
