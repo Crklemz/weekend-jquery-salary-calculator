@@ -30,6 +30,15 @@ function addEmployee() {
         title : $('.titleIn').val(),
         salary : $('.salaryIn').val()
     }
+
+    //clearer
+    
+    $('.fnameIn').val('');
+    $('.lnameIn').val('');
+    $('.idNumIn').val('');
+    $('.titleIn').val('');
+    $('.salaryIn').val('');
+
     
     console.log('in addEmployee, printing employee', employee);
 
@@ -38,14 +47,25 @@ function addEmployee() {
     console.log('in addEmployee, printing employees array after employee push', employees);
     
     //print employees array onto DOM***
+    //add row to table on click for employee to be printed on in the DOM
+    $('.employeeTable').append(`
+    <tr class="employeeRow">
+        <td>${employee.firstName}</td>
+        <td>${employee.lastName}</td>
+        <td>${employee.idNum}</td>
+        <td>${employee.title}</td>
+        <td>${employee.salary}</td>
+        <td></td>        
+    </tr>
+    `)
+
     //connect employee properties to table with matching class
 
-    $('.firstT').text(`${employee.firstName}`);
-    $('.lastT').text(`${employee.lastName}`);
-    $('.idT').text(`${employee.idNum}`);
-    $('.titleT').text(`${employee.title}`);
-    $('.salaryT').text(`${employee.salary}`);
-
+    // $('.firstT').text(`${employee.firstName}`);
+    // $('.lastT').text(`${employee.lastName}`);
+    // $('.idT').text(`${employee.idNum}`);
+    // $('.titleT').text(`${employee.title}`);
+    // $('.salaryT').text(`${employee.salary}`);
 
     //loop through array and print on DOM in table
 
